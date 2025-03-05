@@ -5,13 +5,23 @@
         static void Main(string[] args)
         {
             string output = "";
-            int input = 20;
-            while (input >= 0)
+			int a = 0;
+            int input = 18;
+            while (input >= 1)
             {
-                 input = input % 2;
+                
                 output += input % 2;
+                input /= 2;
+                Console.WriteLine(output);
+                
             }
-            Console.WriteLine(output);
+            string final = "";
+            int b = 0;
+            for(int i = output.Length-1;i >= 0;i--)
+            {
+              final += output[i];
+            }
+            Console.WriteLine(final);
             
         }
 
