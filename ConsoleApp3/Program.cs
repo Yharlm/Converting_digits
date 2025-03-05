@@ -58,6 +58,45 @@
 
             return sum;
         }
+	static int C10_16()
+	{
+		string output = "";
+			int a = 0;
+            int input = 479;
+            while (input >= 1)
+            {
+                
+                
+                switch (input % 16)
+                {
+                case 10:
+                output += "A"; break;
+                case 11:
+                output += "B"; break;
+                case 12:
+                output += "C"; break;
+                case 13:
+                output += "D"; break;
+                case 14:
+                output += "E"; break;
+                case 15:
+                output += "F"; break;
+                default:
+                output += (input % 16).ToString();
+                break;
+                }
+                input /= 16;
+                
+                
+            }
+            string final = "";
+            int b = 0;
+            for(int i = output.Length-1;i >= 0;i--)
+            {
+              final += output[i];
+            }
+      	Console.WriteLine(final);
+	}
 
         
     }
